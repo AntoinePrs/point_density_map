@@ -1,15 +1,15 @@
 rm(list=ls())
 
+#packages
 library(sf)
 library(readxl)
 library(dplyr)
 library(ggplot2)
 library(ggsn)
 
-
+#load the data
 mun <- read_sf("~/BRMUE250GC_SIR.shp")
 pop <- read_excel("~/brasil/pop_mun.xlsx")
-#corr <- read_excel("Side_projects/brasil/regioes_geograficas_composicao_por_municipios_2017_20180911(1).xls")
 
 
 #remove unvalid charaters from pop column
