@@ -17,7 +17,7 @@ pop$`POPULA플O ESTIMADA` <- gsub("\\([0-9]{1,2}\\)", "", pop$`POPULA플O ESTIMADA
 pop$`POPULA플O ESTIMADA` <- gsub("\\.", "", pop$`POPULA플O ESTIMADA`)
 pop$`POPULA플O ESTIMADA` <- as.numeric(pop$`POPULA플O ESTIMADA`)
 
-#joind the population data with the geometries
+#join the population data with the geometries
 pop$code <- paste(pop$`COD. UF`, pop$`COD. MUNIC`, sep = "")
 mun <- mun[mun$CD_GEOCMU %in% pop$code,]
 mun <- left_join(mun, pop, by=c("CD_GEOCMU"="code"))
