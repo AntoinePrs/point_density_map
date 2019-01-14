@@ -7,8 +7,8 @@ library(ggplot2)
 library(ggsn)
 
 
-mun <- read_sf("C:/Users/aperis/Documents/Side_projects/brasil/br_municipios/BRMUE250GC_SIR.shp")
-pop <- read_excel("C:/Users/aperis/Documents/Side_projects/brasil/pop_mun.xlsx")
+mun <- read_sf("~/BRMUE250GC_SIR.shp")
+pop <- read_excel("~/brasil/pop_mun.xlsx")
 #corr <- read_excel("Side_projects/brasil/regioes_geograficas_composicao_por_municipios_2017_20180911(1).xls")
 
 
@@ -17,7 +17,7 @@ pop$`POPULAÇÃO ESTIMADA` <- gsub("\\([0-9]{1,2}\\)", "", pop$`POPULAÇÃO ESTIMADA
 pop$`POPULAÇÃO ESTIMADA` <- gsub("\\.", "", pop$`POPULAÇÃO ESTIMADA`)
 pop$`POPULAÇÃO ESTIMADA` <- as.numeric(pop$`POPULAÇÃO ESTIMADA`)
 
-#on ajoute les informations sur les RGI à la base population
+#joind the population data with the geometries
 pop$code <- paste(pop$`COD. UF`, pop$`COD. MUNIC`, sep = "")
 mun <- mun[mun$CD_GEOCMU %in% pop$code,]
 mun <- left_join(mun, pop, by=c("CD_GEOCMU"="code"))
