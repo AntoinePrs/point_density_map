@@ -1,6 +1,6 @@
 # Point density map
 
-This script was created to make a map very minimalist map of the Brasilian population using dot density. 
+This script was created to make a very minimalist map of the Brasilian population using dot density. 
 For every 1000 inhabitants, a dot with random coordinated is generated within the boundaries of the
 municipality. 
 
