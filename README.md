@@ -5,7 +5,7 @@ For every 1000 inhabitants, a dot with random coordinated is generated within th
 municipality. 
 
 ## Data
-The data used for the example comes from 
+The data used for the example comes from the *Instituto Brasileiro de Geografia e Estatística*
 
 For the population: 
 https://www.ibge.gov.br/estatisticas-novoportal/sociais/populacao/9103-estimativas-de-populacao.html?=&t=downloads
